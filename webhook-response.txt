@@ -1,0 +1,633 @@
+[
+  {
+    "receivedAt": "2026-06-03T13:14:32.406Z",
+    "event": "payment.authorized",
+    "payload": {
+      "entity": "event",
+      "account_id": "acc_RtOAXFZERJFZDl",
+      "event": "payment.authorized",
+      "contains": [
+        "payment"
+      ],
+      "payload": {
+        "payment": {
+          "entity": {
+            "id": "pay_SxAU9k9AnjYuyR",
+            "entity": "payment",
+            "amount": 100000,
+            "currency": "INR",
+            "status": "authorized",
+            "order_id": "order_SxAToe7tmqPaRV",
+            "invoice_id": "inv_SxAToNTrnr6BqG",
+            "international": false,
+            "method": "card",
+            "amount_refunded": 0,
+            "refund_status": null,
+            "captured": false,
+            "description": null,
+            "card_id": "card_SxAUA6e8FAcU03",
+            "card": {
+              "id": "card_SxAUA6e8FAcU03",
+              "entity": "card",
+              "name": "",
+              "last4": "1002",
+              "network": "MasterCard",
+              "type": "credit",
+              "issuer": "ICIC",
+              "international": false,
+              "emi": true,
+              "sub_type": "consumer",
+              "token_iin": "550067000"
+            },
+            "bank": null,
+            "wallet": null,
+            "vpa": null,
+            "email": "abc@example.com",
+            "contact": "+917872479925",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "token_id": "token_SxAUARxryGYmxx",
+            "notes": [],
+            "fee": null,
+            "tax": null,
+            "error_code": null,
+            "error_description": null,
+            "error_source": null,
+            "error_step": null,
+            "error_reason": null,
+            "acquirer_data": {
+              "auth_code": "848970"
+            },
+            "created_at": 1780491819,
+            "reward": null
+          }
+        }
+      },
+      "created_at": 1780491824
+    }
+  },
+  {
+    "receivedAt": "2026-06-03T13:14:33.200Z",
+    "event": "invoice.paid",
+    "payload": {
+      "entity": "event",
+      "account_id": "acc_RtOAXFZERJFZDl",
+      "event": "invoice.paid",
+      "contains": [
+        "payment",
+        "order",
+        "invoice"
+      ],
+      "payload": {
+        "payment": {
+          "entity": {
+            "id": "pay_SxAU9k9AnjYuyR",
+            "entity": "payment",
+            "amount": 100000,
+            "currency": "INR",
+            "base_amount": 100000,
+            "status": "captured",
+            "order_id": "order_SxAToe7tmqPaRV",
+            "invoice_id": "inv_SxAToNTrnr6BqG",
+            "international": false,
+            "method": "card",
+            "amount_refunded": 0,
+            "amount_transferred": 0,
+            "refund_status": null,
+            "captured": true,
+            "description": null,
+            "card_id": "card_SxAUA6e8FAcU03",
+            "card": {
+              "id": "card_SxAUA6e8FAcU03",
+              "entity": "card",
+              "name": "",
+              "last4": "1002",
+              "network": "MasterCard",
+              "type": "credit",
+              "issuer": "ICIC",
+              "international": false,
+              "emi": true,
+              "expiry_month": "01",
+              "expiry_year": "2099",
+              "sub_type": "consumer",
+              "token_iin": "550067000"
+            },
+            "bank": null,
+            "wallet": null,
+            "vpa": null,
+            "email": "abc@example.com",
+            "contact": "+917872479925",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "token_id": "token_SxAUARxryGYmxx",
+            "notes": [],
+            "fee": 2900,
+            "tax": 0,
+            "error_code": null,
+            "error_description": null,
+            "error_source": null,
+            "error_step": null,
+            "error_reason": null,
+            "acquirer_data": {
+              "auth_code": "848970"
+            },
+            "created_at": 1780491819,
+            "reward": null
+          }
+        },
+        "order": {
+          "entity": {
+            "id": "order_SxAToe7tmqPaRV",
+            "entity": "order",
+            "amount": 100000,
+            "amount_paid": 100000,
+            "amount_due": 0,
+            "currency": "INR",
+            "receipt": null,
+            "offer_id": null,
+            "status": "paid",
+            "attempts": 1,
+            "notes": [],
+            "created_at": 1780491799,
+            "description": null,
+            "checkout": null
+          }
+        },
+        "invoice": {
+          "entity": {
+            "id": "inv_SxAToNTrnr6BqG",
+            "entity": "invoice",
+            "receipt": null,
+            "invoice_number": null,
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "customer_details": {
+              "id": "cust_SN2Q5y66h7wX43",
+              "name": null,
+              "email": "abc@example.com",
+              "contact": "+917872479925",
+              "gstin": null,
+              "billing_address": null,
+              "shipping_address": null,
+              "customer_name": null,
+              "customer_email": "abc@example.com",
+              "customer_contact": "+917872479925"
+            },
+            "order_id": "order_SxAToe7tmqPaRV",
+            "subscription_id": "sub_SxATnUZQDyEjM4",
+            "payment_id": "pay_SxAU9k9AnjYuyR",
+            "status": "paid",
+            "expire_by": null,
+            "issued_at": 1780491799,
+            "paid_at": 1780491828,
+            "cancelled_at": null,
+            "expired_at": null,
+            "sms_status": null,
+            "email_status": null,
+            "date": 1780491799,
+            "terms": null,
+            "partial_payment": false,
+            "gross_amount": 100000,
+            "tax_amount": 0,
+            "taxable_amount": 100000,
+            "amount": 100000,
+            "amount_paid": 100000,
+            "amount_due": 0,
+            "first_payment_min_amount": null,
+            "currency": "INR",
+            "currency_symbol": "₹",
+            "description": null,
+            "notes": [],
+            "comment": null,
+            "short_url": "https://rzp.io/rzp/WFsvyIIo",
+            "view_less": true,
+            "billing_start": null,
+            "billing_end": null,
+            "type": "invoice",
+            "group_taxes_discounts": false,
+            "supply_state_code": null,
+            "subscription_status": null,
+            "user_id": null,
+            "created_at": 1780491799,
+            "idempotency_key": null,
+            "reminder_status": null,
+            "ref_num": null
+          }
+        }
+      },
+      "created_at": 1780491827
+    }
+  },
+  {
+    "receivedAt": "2026-06-03T13:14:33.419Z",
+    "event": "payment.captured",
+    "payload": {
+      "entity": "event",
+      "account_id": "acc_RtOAXFZERJFZDl",
+      "event": "payment.captured",
+      "contains": [
+        "payment"
+      ],
+      "payload": {
+        "payment": {
+          "entity": {
+            "id": "pay_SxAU9k9AnjYuyR",
+            "entity": "payment",
+            "amount": 100000,
+            "currency": "INR",
+            "base_amount": 100000,
+            "status": "captured",
+            "order_id": "order_SxAToe7tmqPaRV",
+            "invoice_id": "inv_SxAToNTrnr6BqG",
+            "international": false,
+            "method": "card",
+            "amount_refunded": 0,
+            "amount_transferred": 0,
+            "refund_status": null,
+            "captured": true,
+            "description": null,
+            "card_id": "card_SxAUA6e8FAcU03",
+            "card": {
+              "id": "card_SxAUA6e8FAcU03",
+              "entity": "card",
+              "name": "",
+              "last4": "1002",
+              "network": "MasterCard",
+              "type": "credit",
+              "issuer": "ICIC",
+              "international": false,
+              "emi": true,
+              "expiry_month": "01",
+              "expiry_year": "2099",
+              "sub_type": "consumer",
+              "token_iin": "550067000"
+            },
+            "bank": null,
+            "wallet": null,
+            "vpa": null,
+            "email": "abc@example.com",
+            "contact": "+917872479925",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "token_id": "token_SxAUARxryGYmxx",
+            "notes": [],
+            "fee": 2900,
+            "tax": 0,
+            "error_code": null,
+            "error_description": null,
+            "error_source": null,
+            "error_step": null,
+            "error_reason": null,
+            "acquirer_data": {
+              "auth_code": "848970"
+            },
+            "created_at": 1780491819,
+            "reward": null
+          }
+        }
+      },
+      "created_at": 1780491827
+    }
+  },
+  {
+    "receivedAt": "2026-06-03T13:14:33.645Z",
+    "event": "order.paid",
+    "payload": {
+      "entity": "event",
+      "account_id": "acc_RtOAXFZERJFZDl",
+      "event": "order.paid",
+      "contains": [
+        "payment",
+        "order"
+      ],
+      "payload": {
+        "payment": {
+          "entity": {
+            "id": "pay_SxAU9k9AnjYuyR",
+            "entity": "payment",
+            "amount": 100000,
+            "currency": "INR",
+            "base_amount": 100000,
+            "status": "captured",
+            "order_id": "order_SxAToe7tmqPaRV",
+            "invoice_id": "inv_SxAToNTrnr6BqG",
+            "international": false,
+            "method": "card",
+            "amount_refunded": 0,
+            "amount_transferred": 0,
+            "refund_status": null,
+            "captured": true,
+            "description": null,
+            "card_id": "card_SxAUA6e8FAcU03",
+            "card": {
+              "id": "card_SxAUA6e8FAcU03",
+              "entity": "card",
+              "name": "",
+              "last4": "1002",
+              "network": "MasterCard",
+              "type": "credit",
+              "issuer": "ICIC",
+              "international": false,
+              "emi": true,
+              "expiry_month": "01",
+              "expiry_year": "2099",
+              "sub_type": "consumer",
+              "token_iin": "550067000"
+            },
+            "bank": null,
+            "wallet": null,
+            "vpa": null,
+            "email": "abc@example.com",
+            "contact": "+917872479925",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "token_id": "token_SxAUARxryGYmxx",
+            "notes": [],
+            "fee": 2900,
+            "tax": 0,
+            "error_code": null,
+            "error_description": null,
+            "error_source": null,
+            "error_step": null,
+            "error_reason": null,
+            "acquirer_data": {
+              "auth_code": "848970"
+            },
+            "created_at": 1780491819,
+            "reward": null
+          }
+        },
+        "order": {
+          "entity": {
+            "id": "order_SxAToe7tmqPaRV",
+            "entity": "order",
+            "amount": 100000,
+            "amount_paid": 100000,
+            "amount_due": 0,
+            "currency": "INR",
+            "receipt": null,
+            "offer_id": null,
+            "status": "paid",
+            "attempts": 1,
+            "notes": [],
+            "created_at": 1780491799,
+            "description": null,
+            "checkout": null
+          }
+        }
+      },
+      "created_at": 1780491827
+    }
+  },
+  {
+    "receivedAt": "2026-06-03T13:14:37.347Z",
+    "event": "subscription.activated",
+    "payload": {
+      "entity": "event",
+      "account_id": "acc_RtOAXFZERJFZDl",
+      "event": "subscription.activated",
+      "contains": [
+        "subscription",
+        "payment"
+      ],
+      "payload": {
+        "subscription": {
+          "entity": {
+            "id": "sub_SxATnUZQDyEjM4",
+            "entity": "subscription",
+            "plan_id": "plan_Sx7YPh6mZj0v5B",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "customer_email": "abc@example.com",
+            "customer_contact": "+917872479925",
+            "status": "active",
+            "current_start": 1780491819,
+            "current_end": 1811961000,
+            "ended_at": null,
+            "quantity": 1,
+            "notes": {
+              "userId": "6a200caa90b4436126419369"
+            },
+            "charge_at": 1811961000,
+            "start_at": 1780491819,
+            "end_at": 2127580200,
+            "auth_attempts": 0,
+            "total_count": 12,
+            "paid_count": 1,
+            "customer_notify": true,
+            "created_at": 1780491798,
+            "expire_by": null,
+            "short_url": null,
+            "has_scheduled_changes": false,
+            "change_scheduled_at": null,
+            "source": "api",
+            "payment_method": "card",
+            "offer_id": null,
+            "halted_at": null,
+            "remaining_count": 11
+          }
+        },
+        "payment": {
+          "entity": {
+            "id": "pay_SxAU9k9AnjYuyR",
+            "entity": "payment",
+            "amount": 100000,
+            "currency": "INR",
+            "status": "captured",
+            "order_id": "order_SxAToe7tmqPaRV",
+            "invoice_id": "inv_SxAToNTrnr6BqG",
+            "international": false,
+            "method": "card",
+            "amount_refunded": 0,
+            "amount_transferred": 0,
+            "refund_status": null,
+            "captured": "1",
+            "description": null,
+            "card_id": "card_SxAUA6e8FAcU03",
+            "card": {
+              "id": "card_SxAUA6e8FAcU03",
+              "entity": "card",
+              "name": "",
+              "last4": "1002",
+              "network": "MC",
+              "type": "credit",
+              "issuer": "ICIC",
+              "international": false,
+              "emi": true,
+              "expiry_month": "01",
+              "expiry_year": "2099",
+              "sub_type": "consumer",
+              "token_iin": "550067000",
+              "number": "**** **** **** 1002",
+              "color": "#25BAC3"
+            },
+            "bank": null,
+            "wallet": null,
+            "vpa": null,
+            "email": "abc@example.com",
+            "contact": "+917872479925",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "token_id": "token_SxAUARxryGYmxx",
+            "notes": [],
+            "fee": 2900,
+            "tax": 0,
+            "error_code": null,
+            "error_description": null,
+            "acquirer_data": {
+              "auth_code": "848970"
+            },
+            "created_at": 1780491819
+          }
+        }
+      },
+      "created_at": 1780491834
+    }
+  },
+  {
+    "receivedAt": "2026-06-03T13:14:37.378Z",
+    "event": "subscription.authenticated",
+    "payload": {
+      "entity": "event",
+      "account_id": "acc_RtOAXFZERJFZDl",
+      "event": "subscription.authenticated",
+      "contains": [
+        "subscription"
+      ],
+      "payload": {
+        "subscription": {
+          "entity": {
+            "id": "sub_SxATnUZQDyEjM4",
+            "entity": "subscription",
+            "plan_id": "plan_Sx7YPh6mZj0v5B",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "customer_email": "abc@example.com",
+            "customer_contact": "+917872479925",
+            "status": "active",
+            "current_start": 1780491819,
+            "current_end": 1811961000,
+            "ended_at": null,
+            "quantity": 1,
+            "notes": {
+              "userId": "6a200caa90b4436126419369"
+            },
+            "charge_at": 1811961000,
+            "start_at": 1780491819,
+            "end_at": 2127580200,
+            "auth_attempts": 0,
+            "total_count": 12,
+            "paid_count": 1,
+            "customer_notify": true,
+            "created_at": 1780491798,
+            "expire_by": null,
+            "short_url": null,
+            "has_scheduled_changes": false,
+            "change_scheduled_at": null,
+            "source": "api",
+            "payment_method": "card",
+            "offer_id": null,
+            "halted_at": null,
+            "remaining_count": 11
+          }
+        }
+      },
+      "created_at": 1780491834
+    }
+  },
+  {
+    "receivedAt": "2026-06-03T13:14:41.739Z",
+    "event": "subscription.charged",
+    "payload": {
+      "entity": "event",
+      "account_id": "acc_RtOAXFZERJFZDl",
+      "event": "subscription.charged",
+      "contains": [
+        "subscription",
+        "payment"
+      ],
+      "payload": {
+        "subscription": {
+          "entity": {
+            "id": "sub_SxATnUZQDyEjM4",
+            "entity": "subscription",
+            "plan_id": "plan_Sx7YPh6mZj0v5B",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "customer_email": "abc@example.com",
+            "customer_contact": "+917872479925",
+            "status": "active",
+            "current_start": 1780491819,
+            "current_end": 1811961000,
+            "ended_at": null,
+            "quantity": 1,
+            "notes": {
+              "userId": "6a200caa90b4436126419369"
+            },
+            "charge_at": 1811961000,
+            "start_at": 1780491819,
+            "end_at": 2127580200,
+            "auth_attempts": 0,
+            "total_count": 12,
+            "paid_count": 1,
+            "customer_notify": true,
+            "created_at": 1780491798,
+            "expire_by": null,
+            "short_url": null,
+            "has_scheduled_changes": false,
+            "change_scheduled_at": null,
+            "source": "api",
+            "payment_method": "card",
+            "offer_id": null,
+            "halted_at": null,
+            "remaining_count": 11
+          }
+        },
+        "payment": {
+          "entity": {
+            "id": "pay_SxAU9k9AnjYuyR",
+            "entity": "payment",
+            "amount": 100000,
+            "currency": "INR",
+            "status": "captured",
+            "order_id": "order_SxAToe7tmqPaRV",
+            "invoice_id": "inv_SxAToNTrnr6BqG",
+            "international": false,
+            "method": "card",
+            "amount_refunded": 0,
+            "amount_transferred": 0,
+            "refund_status": null,
+            "captured": "1",
+            "description": null,
+            "card_id": "card_SxAUA6e8FAcU03",
+            "card": {
+              "id": "card_SxAUA6e8FAcU03",
+              "entity": "card",
+              "name": "",
+              "last4": "1002",
+              "network": "MC",
+              "type": "credit",
+              "issuer": "ICIC",
+              "international": false,
+              "emi": true,
+              "expiry_month": "01",
+              "expiry_year": "2099",
+              "sub_type": "consumer",
+              "token_iin": "550067000",
+              "number": "**** **** **** 1002",
+              "color": "#25BAC3"
+            },
+            "bank": null,
+            "wallet": null,
+            "vpa": null,
+            "email": "abc@example.com",
+            "contact": "+917872479925",
+            "customer_id": "cust_SN2Q5y66h7wX43",
+            "token_id": "token_SxAUARxryGYmxx",
+            "notes": [],
+            "fee": 2900,
+            "tax": 0,
+            "error_code": null,
+            "error_description": null,
+            "acquirer_data": {
+              "auth_code": "848970"
+            },
+            "created_at": 1780491819
+          }
+        }
+      },
+      "created_at": 1780491834
+    }
+  }
+]

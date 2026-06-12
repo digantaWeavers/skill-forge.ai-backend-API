@@ -1,0 +1,54 @@
+
+============================================================
+📅 Entry #1 — Friday, 5 June 2026 at 12:34:20 pm IST
+============================================================
+{
+  "receivedAt": "2026-06-05T07:04:20.077Z",
+  "event": "subscription.authenticated",
+  "payload": {
+    "entity": "event",
+    "account_id": "acc_RtOAXFZERJFZDl",
+    "event": "subscription.authenticated",
+    "contains": [
+      "subscription"
+    ],
+    "payload": {
+      "subscription": {
+        "entity": {
+          "id": "sub_SxrPJcATkFbbQi",
+          "entity": "subscription",
+          "plan_id": "plan_Sx7YPh6mZj0v5B",
+          "customer_id": "cust_SxWVcxNDSIQgi6",
+          "customer_email": "abc@example.com",
+          "customer_contact": "+917872479925",
+          "status": "active",
+          "current_start": 1780643045,
+          "current_end": 1812133800,
+          "ended_at": null,
+          "quantity": 1,
+          "notes": {
+            "userId": "6a2274607447f62f88a7807e"
+          },
+          "charge_at": 1812133800,
+          "start_at": 1780643045,
+          "end_at": 2127753000,
+          "auth_attempts": 0,
+          "total_count": 12,
+          "paid_count": 1,
+          "customer_notify": true,
+          "created_at": 1780642973,
+          "expire_by": null,
+          "short_url": null,
+          "has_scheduled_changes": false,
+          "change_scheduled_at": null,
+          "source": "api",
+          "payment_method": "card",
+          "offer_id": null,
+          "halted_at": null,
+          "remaining_count": 11
+        }
+      }
+    },
+    "created_at": 1780643059
+  }
+}
