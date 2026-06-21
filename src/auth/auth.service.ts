@@ -408,4 +408,35 @@ export class AuthService {
             throw new BadRequestException(error);
         }
     }
+
+    async refreshTokenService(refreshToken: string) {
+        try {
+            // Verify refresh token
+            const payload = await this.jwtService.verifyAsync(refreshToken, {
+                secret: process.env.JWT_REFRESH_SECRET,
+            });
+
+            // Find user
+            const user = await this.userModel.findById(payload.sub);
+
+            if (!user) {
+                throw new BadRequestException('User not found');
+            }
+
+            if (!user.isActive) {
+                throw new BadRequestException('User account is not active');
+            }
+
+            // Generate new tokens
+            const tokens = await this.generateTokens(user);
+
+            return {
+                message: 'Token refreshed successfully',
+                ...tokens,
+            };
+
+        } catch (error) {
+            throw new BadRequestException(error);
+        }
+    }
 }

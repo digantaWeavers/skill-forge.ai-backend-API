@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, Patch, Post, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Get, Patch, Req, UploadedFile, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ProfileService } from './profile.service';
 import type { AuthenticatedRequest } from 'src/common/types/authenticated-request';
@@ -11,7 +11,7 @@ export class ProfileController {
         private profileService: ProfileService
     ) { }
 
-    @Post('me')
+    @Get('me')
     async getProfileController(
         @Req() req: AuthenticatedRequest,
     ) {

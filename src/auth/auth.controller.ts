@@ -32,6 +32,11 @@ export class AuthController {
         return await this.authService.login(loginDto);
     }
 
+    @Post('refresh-token')
+    async refresh(@Body('refreshToken') refreshToken: string) {
+        return await this.authService.refreshTokenService(refreshToken);
+    }
+
     // google signin auth
     @Get('google')
     @UseGuards(GoogleAuthGuard)

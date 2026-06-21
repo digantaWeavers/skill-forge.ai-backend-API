@@ -32,5 +32,11 @@
   "exclude": [
     "node_modules",
     "dist"
-  ] // ✅ add this
+  ], // ✅ add this
+  "watchOptions": {
+    "watchFile": "fixedPollingInterval",
+    "watchDirectory": "fixedPollingInterval",
+    "fallbackPolling": "fixedPollingInterval",
+    "interval": 1000
+  }
 }
